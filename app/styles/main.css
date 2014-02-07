@@ -1,0 +1,44 @@
+/* Navigation Bar */
+
+body{
+	background:#f8f8f8;
+}
+
+.eco-nav{
+	border-radius: 0;
+	margin-bottom: 1px;
+	background:#f8f8f8;
+	border-color: #e7e7e7;
+}
+
+.eco-nav .navbar-nav{
+	float:right;
+}
+
+.eco-nav .fa{
+	font-size: 1.5em;
+}
+
+.eco-sidebar{
+	padding-right: 0;
+}
+
+.eco-sidebar.nav-stacked li{
+	border-bottom:1px solid #e7e7e7;
+	margin-top:0;
+}
+
+.eco-main-view{
+	background: #fff;
+	height: 100%;
+	min-height: 1000px;
+	border-left:1px solid #e7e7e7;
+	padding: 20px 35px 10px 20px;
+}
+
+.eco-main-view h1{
+	border-bottom: 1px solid #F0F0F0;
+	margin:0 0 20px;
+	padding-bottom: 5px;
+}
+
