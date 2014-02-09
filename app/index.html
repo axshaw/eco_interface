@@ -5,24 +5,30 @@
 
 	<link rel="stylesheet" href="./bower_components/bootstrap/dist/css/bootstrap.css">
 	<link rel="stylesheet" href="./bower_components/font-awesome/css/font-awesome.css">
-	<link rel="stylesheet" href="./styles/main.css">
+
+  <link rel="stylesheet" href="./styles/main.css">
+
+  <!--Modules-->
+  <link rel="stylesheet" href="./modules/Connectivity/styles.css">
+  <link rel="stylesheet" href="./modules/Eco/styles.css">
+  <link rel="stylesheet" href="./modules/Light/styles.css">
+	
 </head>
 <body>
 
 	<nav class="navbar navbar-default navbar-inverse eco-nav" role="navigation">
       <div class="container-fluid">
-        <!-- Brand and toggle get grouped for better mobile display -->
+        
         <div class="navbar-header">
           <a class="navbar-brand" href="#">Eco</a>
         </div>
 
-        <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-9">
           <ul class="nav navbar-nav">
             <li><a href="#">Wifi</a></li>
           </ul>
-        </div><!-- /.navbar-collapse -->
-      </div><!-- /.container-fluid -->
+        </div>
+      </div>
     </nav>
 
 
@@ -45,12 +51,13 @@
   <script src="/socket.io/socket.io.js"></script>
 	<script src="./js/app.js"></script>
 
-	<!--Controllers-->
+	<!--Controllers for modules-->
 	<script src="./modules/Temperature/RealTimeController.js"></script>
   <script src="./modules/Light/RealTimeController.js"></script>
   <script src="./modules/Eco/RealTimeController.js"></script>
   <script src="./modules/Connectivity/RealTimeController.js"></script>
 
+  <!--Services-->
   <script src="./services/EcoWebSocketService.js"></script>
 
 </body>

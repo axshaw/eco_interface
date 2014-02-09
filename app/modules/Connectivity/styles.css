@@ -1,0 +1,9 @@
+
+/* Connectivity Widget */
+.ConnectivityWidget{
+	color:red;
+}
+
+.ConnectivityWidget .on{
+	color:green;
+}

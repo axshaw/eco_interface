@@ -1,0 +1,11 @@
+.LightWidget .dim{
+	color: #ccc;
+}
+
+.LightWidget .normal{
+	color:#ededed;
+}
+
+.LightWidget .bright{
+	color:yellow;
+}
