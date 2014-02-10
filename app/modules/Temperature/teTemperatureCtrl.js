@@ -1,4 +1,4 @@
-ecoApp.controller('TemparetureWidgetCtrl', function ($scope, EcoWebSocketService)  {
+ecoApp.controller('teTemperatureCtrl', function ($scope, EcoWebSocketService)  {
 
 	$scope.currentTemperature = 0;
 

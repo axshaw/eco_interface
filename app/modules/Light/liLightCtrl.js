@@ -1,4 +1,4 @@
-ecoApp.controller('LightWidgetCtrl', function ($scope)  {
+ecoApp.controller('liLightCtrl', function ($scope)  {
 
 	$scope.lightValue = 1;
 

@@ -1,4 +1,4 @@
-ecoApp.controller('ConncetivityWidgetCtrl', function ($scope)  {
+ecoApp.controller('coConnectivityCtrl', function ($scope)  {
 
 	$scope.power = true;
 

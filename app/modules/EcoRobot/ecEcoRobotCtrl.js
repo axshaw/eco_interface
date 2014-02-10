@@ -1,4 +1,4 @@
-ecoApp.controller('EcoRobotWidgetCtrl', function ($scope)  {
+ecoApp.controller('ecEcoRobotCtrl', function ($scope)  {
 
 	$scope.sensor1 = 0.0;
 	$scope.sensor2 = 0.0;
