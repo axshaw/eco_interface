@@ -15,6 +15,7 @@ app.use("/modules", express.static(__dirname + '/app/modules'));
 app.use("/services", express.static(__dirname + '/app/services'));
 app.use("/assets", express.static(__dirname + '/app/assets'));
 
+
 io.sockets.on('connection', function (socket) {
 
   setInterval(function(){
@@ -33,7 +34,7 @@ io.sockets.on('connection', function (socket) {
     socket.emit('eco-data', {key:'compass', value:(Math.floor(Math.random() * 360) + 1)});
 
   	socket.emit('eco-data', {key:'power', value:Math.random()<0.5});
-  }, 1000);
+  }, 2000);
   
 });
 

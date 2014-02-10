@@ -23,3 +23,16 @@ ecoApp.config(['$routeProvider',
         redirectTo: '/'
       });
   }]);
+
+
+ecoApp.directive('angularOdometer', function () {
+    return {
+      restrict: 'A',
+      link: function(scope, element, attrs) {	
+      	new Odometer({el: element[0], value: scope[attrs.odometer]});
+      	scope.$watch(attrs.odometer, function(val) {
+      		element.text(val);
+        });
+      }
+    };
+ });
