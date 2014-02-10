@@ -1,26 +1,23 @@
-ecoApp.controller('liLightCtrl', function ($scope)  {
+ecoApp.controller('liLightCtrl', function ($scope, EcoWebSocketService)  {
 
-	$scope.lightValue = 1;
+	$scope.light = 1;
 
+	//Does this belong to a service?
 	$scope.lightLabel = function(){
-		if($scope.lightValue <= 3){
+		if($scope.light <= 3){
 			return 'dim'
 		}
-		if($scope.lightValue >3 && $scope.lightValue <= 7){
+		if($scope.light >3 && $scope.light <= 7){
 			return 'normal'
 		}
 		return 'bright';
 	}
 
+	//does this belong in a service?
 	$scope.lightState = function(){
-		return ($scope.lightValue/10);
+		return ($scope.light/10);
 	}
 
-	$scope.$on('light', function(event, data) {
-		//Need to use apply because its async callback
-		$scope.$apply(function(){
-			$scope.lightValue = data;
-		})
-	});
+	EcoWebSocketService.RegisterListener($scope, 'light');
 
 });

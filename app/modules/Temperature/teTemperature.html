@@ -2,7 +2,7 @@
 	<div class="panel panel-default">
 	  <div class="panel-heading">Current Temperature</div>
 	  <div class="panel-body">
-	    <h1 ng-class="temperatureState()">{{currentTemperature}} &deg;C</h1>
+	    <h1 ng-class="{blue: currentTemperature < 15, red: currentTemperature >= 15}">{{currentTemperature}} &deg;C</h1>
 	  </div>
 	</div>
 </div>

@@ -30,6 +30,8 @@ io.sockets.on('connection', function (socket) {
     socket.emit('eco-data', {key:'sensor7', value:(Math.floor(Math.random() * 10) + 1)/10});
     socket.emit('eco-data', {key:'sensor8', value:(Math.floor(Math.random() * 10) + 1)/10});
 
+    socket.emit('eco-data', {key:'compass', value:(Math.floor(Math.random() * 360) + 1)});
+
   	socket.emit('eco-data', {key:'power', value:Math.random()<0.5});
   }, 1000);
   
