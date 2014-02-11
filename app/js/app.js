@@ -24,11 +24,12 @@ ecoApp.config(['$routeProvider',
       });
   }]);
 
-
+//TODO: move this to directive file?
 ecoApp.directive('angularOdometer', function () {
     return {
       restrict: 'A',
       link: function(scope, element, attrs) {	
+        console.log(attrs);
       	new Odometer({el: element[0], value: scope[attrs.odometer]});
       	scope.$watch(attrs.odometer, function(val) {
       		element.text(val);
