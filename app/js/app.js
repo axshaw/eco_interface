@@ -19,6 +19,9 @@ ecoApp.config(['$routeProvider',
     when('/', {
       templateUrl: 'app/views/Dashboard.html'
     }).
+    when('/Graphs', {
+      templateUrl: 'app/views/Graphs.html'
+    }).
     otherwise({
       redirectTo: '/'
     });
