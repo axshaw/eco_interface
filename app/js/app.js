@@ -16,24 +16,23 @@ var ecoApp = angular.module('ecoApp', ['ngRoute']);
 ecoApp.config(['$routeProvider',
   function($routeProvider) {
     $routeProvider.
-      when('/', {
-        templateUrl: 'app/views/Dashboard.html'
-      }).
-      otherwise({
-        redirectTo: '/'
-      });
+    when('/', {
+      templateUrl: 'app/views/Dashboard.html'
+    }).
+    otherwise({
+      redirectTo: '/'
+    });
   }]);
 
 //TODO: move this to directive file?
 ecoApp.directive('angularOdometer', function () {
-    return {
-      restrict: 'A',
-      link: function(scope, element, attrs) {	
-        console.log(attrs);
-      	new Odometer({el: element[0], value: scope[attrs.odometer]});
-      	scope.$watch(attrs.odometer, function(val) {
-      		element.text(val);
-        });
-      }
-    };
- });
+  return {
+    restrict: 'A',
+    link: function(scope, element, attrs) {	
+     new Odometer({el: element[0], value: scope[attrs.odometer]});
+     scope.$watch(attrs.odometer, function(val) {
+      element.text(val);
+    });
+   }
+ };
+});

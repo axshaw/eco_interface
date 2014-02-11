@@ -1,4 +1,4 @@
-ecoApp.controller('coConnectivityCtrl', function ($scope, EcoWebSocketService)  {
+ecoApp.controller('poPowerCtrl', function ($scope, EcoWebSocketService)  {
 
 	$scope.power = true;
 

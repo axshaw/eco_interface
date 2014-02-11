@@ -4,67 +4,68 @@
 	<title>Eco</title>
 
   <link rel="stylesheet" href="./bower_components/bootstrap/dist/css/bootstrap.css">
-	<link rel="stylesheet" href="./bower_components/odometer/themes/odometer-theme-default.css">
-	<link rel="stylesheet" href="./bower_components/font-awesome/css/font-awesome.css">
+  <link rel="stylesheet" href="./bower_components/odometer/themes/odometer-theme-default.css">
+  <link rel="stylesheet" href="./bower_components/font-awesome/css/font-awesome.css">
 
   <link rel="stylesheet" href="./styles/main.css">
 
   <!--Modules-->
-  <link rel="stylesheet" href="./modules/Connectivity/coStyles.css">
+  <link rel="stylesheet" href="./modules/Power/poStyles.css">
   <link rel="stylesheet" href="./modules/EcoRobot/ecStyles.css">
   <link rel="stylesheet" href="./modules/Light/liStyles.css">
   <link rel="stylesheet" href="./modules/Compass/comStyles.css">
-	
+  
 </head>
 <body>
 
 	<nav class="navbar navbar-default navbar-inverse eco-nav" role="navigation">
-      <div class="container-fluid">
-        
-        <div class="navbar-header">
-          <a class="navbar-brand" href="#">Eco</a>
-        </div>
-
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-9">
-          <ul class="nav navbar-nav">
-            <li><a href="#">Wifi</a></li>
-          </ul>
-        </div>
+    <div class="container-fluid">
+      
+      <div class="navbar-header">
+        <a class="navbar-brand" href="#">Eco</a>
       </div>
-    </nav>
+
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-9">
+        <ul class="nav navbar-nav">
+          <li><a href="#"><span class="badge">1</span></a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
 
 
-    <section class="row">
-    	<div class="eco-sidebar sidebar col-md-2">
-    		<ul class="nav navbar-default nav-stacked eco-sidebar">
-		      <li class="active"><a href="#"><i class="fa fa-tachometer"></i> Realtime Dashboard</a></li>
-		      <li><a href="#"><i class="fa fa-bar-chart-o"></i> Charts</a></li>
-    		</ul>
-    	</div>
-    	<div class="col-md-10 eco-main-view">
-    		<div ng-view></div>
-    	</div>
-    </section>
-	
-
-	<script src="./bower_components/jquery/jquery.js"></script>
-	<script src="./bower_components/angular/angular.js"></script>
-  <script src="./bower_components/angular/angular-route.js"></script>
-  <script src="http://github.hubspot.com/odometer/odometer.js"></script>
-  <script src="/socket.io/socket.io.js"></script>
-	<script src="./js/app.js"></script>
+  <section class="row">
+   <div class="eco-sidebar sidebar col-md-2">
+    <ul class="nav navbar-default nav-stacked eco-sidebar">
+      <li class="active"><a href="#"><i class="fa fa-tachometer"></i> Realtime Dashboard</a></li>
+      <li><a href="#"><i class="fa fa-bar-chart-o"></i> Charts</a></li>
+    </ul>
+  </div>
+  <div class="col-md-10 eco-main-view">
+    <div ng-view></div>
+  </div>
+</section>
 
 
-	<!--Controllers for modules-->
-	<script src="./modules/Temperature/teTemperatureCtrl.js"></script>
-  <script src="./modules/Light/liLightCtrl.js"></script>
-  <script src="./modules/EcoRobot/ecEcoRobotCtrl.js"></script>
-  <script src="./modules/Connectivity/coConnectivityCtrl.js"></script>
-  <script src="./modules/Compass/comCompassCtrl.js"></script>
+<script src="./bower_components/jquery/jquery.js"></script>
+<script src="./bower_components/angular/angular.js"></script>
+<script src="./bower_components/angular/angular-route.js"></script>
+<script src="./bower_components/odometer/odometer.js"></script>
+<script src="/socket.io/socket.io.js"></script>
+<script src="./js/app.js"></script>
 
-  <!--Services-->
-  <script src="./services/EcoWebSocketService.js"></script>
-  <script src="./modules/Compass/comCompassSvc.js"></script>
+
+<!--Controllers for modules-->
+<script src="./modules/Temperature/teTemperatureCtrl.js"></script>
+<script src="./modules/Light/liLightCtrl.js"></script>
+<script src="./modules/EcoRobot/ecEcoRobotCtrl.js"></script>
+<script src="./modules/Power/poPowerCtrl.js"></script>
+<script src="./modules/Compass/comCompassCtrl.js"></script>
+<script src="./modules/Connectivity/conConnectivityCtrl.js"></script>
+
+<!--Services-->
+<script src="./services/EcoWebSocketService.js"></script>
+<script src="./modules/Compass/comCompassSvc.js"></script>
 
 </body>
 </html>

@@ -1,13 +1,15 @@
 ecoApp.controller('liLightCtrl', function ($scope, EcoWebSocketService)  {
 
-	$scope.light = 1;
+	$scope.sensor = {
+		value:0
+	};
 
 	//Does this belong to a service?
 	$scope.lightLabel = function(){
-		if($scope.light <= 3){
+		if($scope.sensor.value <= 3){
 			return 'dim'
 		}
-		if($scope.light >3 && $scope.light <= 7){
+		if($scope.sensor.value >3 && $scope.sensor.value <= 7){
 			return 'normal'
 		}
 		return 'bright';
@@ -15,7 +17,7 @@ ecoApp.controller('liLightCtrl', function ($scope, EcoWebSocketService)  {
 
 	//does this belong in a service?
 	$scope.lightState = function(){
-		return ($scope.light/10);
+		return ($scope.sensor.value/10);
 	}
 
 	EcoWebSocketService.RegisterListener($scope, 'light');

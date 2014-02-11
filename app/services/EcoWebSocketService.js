@@ -4,23 +4,29 @@
  	var socket = io.connect('http://localhost');
 
  	//listen for any data being pushed
-  	socket.on('eco-data', function (data) {
+   socket.on('eco-data', function (data) {
   		//broadcast data across Angular for all subscribers listening
- 		$rootScope.$broadcast(data.key, data.value); 
-  	});
+      console.log(data);//
+      $rootScope.$broadcast(data.sensor, data); 
+    });
 
   	/**
   	 * Method registers real time listner to given key.
-  	 * You can override the scope value it maps back to by passing a map key
   	 */
-  	this.RegisterListener = function(scope, key, map){
-  		map = (map) ? map : key;
-  		scope.$on(key, function(event, data) {
-			//Need to use apply because its async callback
-			scope.$apply(function(){
-				scope[map] = data;
-			})
-		});
-  	}
+    this.RegisterListener = function(scope, eventId, map){
 
- });
+      map = (map) ? map : 'sensor';
+
+      scope.$on(eventId, function(event, data) {
+
+        console.log(map);
+
+  		  //Need to use apply because its async callback
+        scope.$apply(function(){
+          scope[map] = data;
+        });
+
+      });
+    }
+
+  });

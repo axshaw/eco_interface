@@ -1,9 +1,9 @@
 
 /* Connectivity Widget */
-.ConnectivityWidget{
+.PowerWidget{
 	color:red;
 }
 
-.ConnectivityWidget .on{
+.PowerWidget .on{
 	color:green;
 }

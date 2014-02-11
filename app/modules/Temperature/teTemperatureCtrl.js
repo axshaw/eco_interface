@@ -1,9 +1,10 @@
 ecoApp.controller('teTemperatureCtrl', function ($scope, EcoWebSocketService)  {
 
-	var el = document.querySelector('.odometer');
+	$scope.sensor = {
+		value:'0',
+		unit:'C'
+	}
 
-	$scope.currentTemperature = 0;
-
-	EcoWebSocketService.RegisterListener($scope, 'temperature', 'currentTemperature');
+	EcoWebSocketService.RegisterListener($scope, 'temperature');
 
 });
