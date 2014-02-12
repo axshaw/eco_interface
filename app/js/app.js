@@ -39,3 +39,30 @@ ecoApp.directive('angularOdometer', function () {
    }
  };
 });
+
+//TODO: move this to directive file?
+ecoApp.directive('angularGage', function () {
+  return {
+    restrict: 'A',
+    scope:{
+      value: '@',
+      min:'@',
+      max:'@'
+    },
+    link: function(scope, element, attrs) { 
+
+     var gage = new JustGage({
+      id: attrs.id, 
+      value: scope.value, 
+      min: scope.min,
+      max: scope.max
+    }); 
+
+     scope.$watch('value', function(value){
+      gage.refresh(value);
+    });
+
+   }
+ }
+});
+

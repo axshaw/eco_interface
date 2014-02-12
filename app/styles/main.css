@@ -74,6 +74,7 @@ div.eco-sidebar li a.active, div.eco-sidebar li a:hover, div.eco-sidebar li a:fo
 	padding: 20px 35px 10px 20px;
 	margin-left:250px;
 	margin-top:50px;
+	min-height: 1500px;
 }
 
 .eco-main-view h1{
@@ -91,13 +92,24 @@ div.eco-sidebar li a.active, div.eco-sidebar li a:hover, div.eco-sidebar li a:fo
 	color:blue;
 }
 
+/*Gage widget*/
+.GageWidget .panel-body{
+	padding:0px 15px;
+}
+.GageWidget .gage{
+	width:220px;
+	height:170px;
+	margin-top:-35px;
+}
+
 /* General widget styles */
 .EcoWidget .panel-body{
 	text-align: center;
+	min-height: 130px;
 }
 
 .EcoWidget.LargeIcon i{
-	font-size: 8em;
+	font-size: 7em;
 }
 
 .EcoWidget .panel-heading{

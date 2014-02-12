@@ -19,8 +19,6 @@
 
       scope.$on(eventId, function(event, data) {
 
-        console.log(map);
-
   		  //Need to use apply because its async callback
         scope.$apply(function(){
           scope[map] = data;
