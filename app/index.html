@@ -20,11 +20,11 @@
 </head>
 <body>
 
-	<nav class="navbar navbar-default navbar-inverse eco-nav" role="navigation">
+	<nav class="navbar eco-nav" role="navigation">
     <div class="container-fluid">
 
       <div class="navbar-header">
-        <a class="navbar-brand" href="#">Eco</a>
+        <a class="navbar-brand" href="#">Eco Bot v1</a>
       </div>
 
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-9">
@@ -38,8 +38,8 @@
 
   <section class="row">
    <div class="eco-sidebar sidebar col-md-2">
-    <ul class="nav navbar-default nav-stacked eco-sidebar">
-      <li class="active"><a href="#"><i class="fa fa-tachometer"></i> Realtime Dashboard</a></li>
+    <ul class="nav nav-stacked">
+      <li><a href="#" class="active"><i class="fa fa-tachometer"></i> Realtime Dashboard</a></li>
       <li><a href="#/Graphs"><i class="fa fa-bar-chart-o"></i> Charts</a></li>
     </ul>
   </div>
@@ -47,8 +47,6 @@
     <div ng-view></div>
   </div>
 </section>
-
-
 
 
 <script src="./bower_components/jquery/jquery.js"></script>

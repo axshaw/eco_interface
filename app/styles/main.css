@@ -1,16 +1,24 @@
 /* Navigation Bar */
 
 body{
-	background:#f8f8f8;
+	background:#32323a;
 }
 
 /*Navigation Bar*/
-
-.eco-nav{
+nav.eco-nav{
 	border-radius: 0;
 	margin-bottom: 1px;
-	background:#f8f8f8;
-	border-color: #e7e7e7;
+	background:#32323a;
+	border-color: rbga(225, 225, 225, 0.05);
+	position: fixed;
+	top:0;
+	color:#1FB5AD;
+	width:100%;
+	z-index: 2;
+}
+
+nav.eco-nav a{
+	color: #1FB5AD;
 }
 
 .eco-nav .navbar-nav{
@@ -24,20 +32,48 @@ body{
 /* Side Bar */
 
 .eco-sidebar{
-	padding-right: 0;
+	position: fixed;
+	padding: 0;
+	top:50px;
+	left: 0px;
+	margin:0;
+	background: inherit;
 }
 
-.eco-sidebar.nav-stacked li{
-	border-bottom:1px solid #e7e7e7;
+.eco-sidebar .nav-stacked li{
 	margin-top:0;
+	border-bottom: 1px solid rgba(255,255,255,0.05)
+}
+
+.eco-sidebar .nav-stacked li a{
+	color: #aeb2b7;
+	font-size: 12px;
+}
+
+.eco-sidebar li a i {
+	font-size: 15px;
+	padding-right: 6px;
+}
+
+div.eco-sidebar li a.active, div.eco-sidebar li a:hover, div.eco-sidebar li a:focus {
+	background: #28282e;
+	color: #1FB5AD;
+	display: block;
+	-webkit-transition: all 0.3s ease;
+	-moz-transition: all 0.3s ease;
+	-o-transition: all 0.3s ease;
+	-ms-transition: all 0.3s ease;
+	transition: all 0.3s ease;
 }
 
 .eco-main-view{
-	background: #fff;
+	background: #f1f2f7;
 	height: 100%;
 	min-height: 1000px;
 	border-left:1px solid #e7e7e7;
 	padding: 20px 35px 10px 20px;
+	margin-left:250px;
+	margin-top:50px;
 }
 
 .eco-main-view h1{
@@ -64,7 +100,25 @@ body{
 	font-size: 8em;
 }
 
+.EcoWidget .panel-heading{
+	background-color: #fafafa;
+	border-color: #eff2f7;
+	font-size: 13px;
+	background: #fafafa;
+	text-transform: uppercase;
+	padding: 15px;
+	color:#767676;
+text-align: center;
+}
+
 .chart svg{
 	height:300px;
+}
+
+h1.page-header{
+	color:#1FB5AD;
+	text-transform: uppercase;
+	font-size: 1.5em;
+	margin:10px 0;
 }
 
