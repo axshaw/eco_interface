@@ -112,6 +112,10 @@ div.eco-sidebar li a.active, div.eco-sidebar li a:hover, div.eco-sidebar li a:fo
 	font-size: 7em;
 }
 
+.EcoWidget .vertical-center{
+	line-height: 60px;
+}
+
 .EcoWidget .panel-heading{
 	background-color: #fafafa;
 	border-color: #eff2f7;

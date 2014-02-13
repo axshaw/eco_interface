@@ -1,8 +1,8 @@
-<div ng-controller="teTemperatureCtrl" class="col-md-3 EcoWidget TemperatureWidget">
+<div ng-controller="teTemperatureCtrl" class="col-md-3 EcoWidget TemperatureWidget vertical-center">
 	<div class="panel panel-default">
 	  <div class="panel-heading">Current Temperature</div>
 	  <div class="panel-body">
-	    <h1 class="temp" ng-class="{blue: sensor.value < 15, red: sensor.value >= 15}">
+	    <h1 class="temp vertical-center" ng-class="{blue: sensor.value < 15, red: sensor.value >= 15}">
 	    	<span angular-odometer data-odometer="sensor.value"></span>
 	    	<span class="temp-symbol">&deg; {{sensor.unit}}</span>
 	    </h1>
