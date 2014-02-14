@@ -1,4 +1,4 @@
-ecoApp.controller('teTemperatureRealTimeGraph', function ($scope, EcoWebSocketService)  {
+ecoApp.controller('teTemperatureRealTimeGraphCtrl', function ($scope, EcoWebSocketService)  {
 
 	EcoWebSocketService.RegisterListener($scope, 'temperature');
 

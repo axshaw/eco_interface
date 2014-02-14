@@ -1,12 +1,12 @@
 <h1 class="col-md-12 clearfix page-header">Dashboard</h1>
 
-<div ng-include src="'app/modules/Connectivity/conConnectivity.html'"></div>
+<!-- Chnage the width with params? -->
 
-<div ng-include src="'app/modules/TemperatureRealTimeGraph/teTemperatureRealTimeGraph.html'"></div>
-<div ng-include src="'app/modules/Temperature/teTemperature.html'"></div>
-<div ng-include src="'app/modules/Power/poPower.html'"></div>
-<div ng-include src="'app/modules/Light/liLight.html'"></div>
-<div ng-include src="'app/modules/Compass/comCompass.html'"></div>
-
-<div ng-include src="'app/modules/EcoRobot/ecEcoRobot.html'"></div>
-<div ng-include src="'app/modules/Carbon/coCarbon.html'"></div>
+<eco-connectivity></eco-connectivity>
+<eco-temperature-realtime-graph></eco-temperature-realtime-graph>
+<eco-temperature></eco-temperature>
+<eco-power></eco-power>
+<eco-light></eco-light>
+<eco-compass></eco-compass>
+<eco-robot></eco-robot>
+<eco-carbon></eco-carbon>
