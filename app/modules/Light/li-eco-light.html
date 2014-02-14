@@ -1,8 +1,8 @@
-<div class="col-md-3 EcoWidget LargeIcon LightWidget">
+<div class="col-md-3 EcoWidget LargeIcon LightWidget GageWidget">
 	<div class="panel panel-default">
 	  <div class="panel-heading">Current Light</div>
-	  <div class="panel-body" ng-style="{opacity:lightState()}">
-	    <i class="fa fa-lightbulb-o" ng-class="	lightLabel()"></i>
-	  </div>
+		<div class="panel-body">
+			<div angular-gage id="LightGage" class="gage" value="{{sensor.value}}" min="0" max="15" level-colors="#00000,#f6ff00"></div>
+		</div>
 	</div>
 </div>

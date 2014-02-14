@@ -46,23 +46,27 @@ ecoApp.directive('angularGage', function () {
     restrict: 'A',
     scope:{
       value: '@',
+      levelColors : '@',
       min:'@',
       max:'@'
     },
     link: function(scope, element, attrs) { 
 
-     var gage = new JustGage({
-      id: attrs.id, 
-      value: scope.value, 
-      min: scope.min,
-      max: scope.max
-    }); 
+      scope.levelColors = scope.levelColors || "#a9d70b,#f9c802,#ff0000";
 
-     scope.$watch('value', function(value){
-      gage.refresh(value);
-    });
+      var gage = new JustGage({
+        id: attrs.id, 
+        value: scope.value, 
+        min: scope.min,
+        max: scope.max,
+        levelColors:scope.levelColors.split(',')
+      }); 
 
-   }
- }
+      scope.$watch('value', function(value){
+        gage.refresh(value);
+      });
+
+    }
+  }
 });
 
