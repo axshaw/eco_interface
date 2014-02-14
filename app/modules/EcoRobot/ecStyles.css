@@ -2,7 +2,6 @@
 .EcoRobotWidget .panel-body{
 	position: relative;
 	height: 480px;
-	background:url('../../assets/Eco.jpg') top center no-repeat;
 }
 
 .EcoRobotWidget .sensor{
@@ -10,11 +9,24 @@
 	font-size: 0.8em;
 }
 
-.EcoRobotWidget .sensor1{top:30px;left:410px;}
+.EcoRobotWidget .panel-body{
+	 -webkit-transition: all 1s ease-in-out;
+	  -moz-transition: all 1s ease-in-out;
+	  -o-transition: all 1s ease-in-out;
+	  transition: all 1s ease-in-out;
+}
+
+.EcoRobotWidget img{
+	position: absolute;
+	top:45px;
+	left:225px;
+}
+
+.EcoRobotWidget .sensor1{top:30px;left:400px;}
 .EcoRobotWidget .sensor2{top:90px;right:260px;}
 .EcoRobotWidget .sensor3{top:220px;right:200px;}
 .EcoRobotWidget .sensor4{top:355px;right:255px;}
-.EcoRobotWidget .sensor5{top:415px;right:405px;}
-.EcoRobotWidget .sensor6{top:355px;left:255px;}
-.EcoRobotWidget .sensor7{top:220px;left:200px;}
-.EcoRobotWidget .sensor8{top:90px;left:255px;}
+.EcoRobotWidget .sensor5{top:425px;right:405px;}
+.EcoRobotWidget .sensor6{top:360px;left:255px;}
+.EcoRobotWidget .sensor7{top:225px;left:180px;}
+.EcoRobotWidget .sensor8{top:90px;left:245px;}
