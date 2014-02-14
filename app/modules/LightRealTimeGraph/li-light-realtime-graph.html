@@ -1,16 +1,17 @@
 <div class="col-md-6 EcoWidget RealTimeGraphWidget">
 	<div class="panel panel-default">
-		<div class="panel-heading">Temperature</div>
+		<div class="panel-heading">Light</div>
 		<div class="panel-body">
 			<div 
 				eco-real-time-line-graph 
-				id="temperatureRTChart"
+				id="lightRTChart"
 				update-value='sensor.value'
 				class='chart'
-				no-data="Waiting for a collection of Temperature readings..."
+				no-data="Waiting for a collection of Light readings..."
 				axis-x-label="Time (H:M:S)"
-				axis-y-label="Temperature"
-				key="Temperature"/>
+				line-color='#d6dd18'
+				axis-y-label="Light"
+				key="Light"/>
 		</div>
 	</div>
 </div>

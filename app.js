@@ -16,6 +16,7 @@ app.use("/socket.io", express.static(__dirname + '/app/js/socket.io'));
 app.use("/styles", express.static(__dirname + '/app/styles'));
 app.use("/app", express.static(__dirname + '/app'));
 app.use("/modules", express.static(__dirname + '/app/modules'));
+app.use("/directives", express.static(__dirname + '/app/directives'));
 app.use("/services", express.static(__dirname + '/app/services'));
 app.use("/assets", express.static(__dirname + '/app/assets'));
 

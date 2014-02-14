@@ -3,7 +3,7 @@ ecoApp.directive('ecoTemperatureRealtimeGraph', function () {
     restrict: 'E',
     replace:true,
     templateUrl:'./app/modules/TemperatureRealTimeGraph/te-temperature-realtime-graph.html',
-    controller:'teTemperatureRealTimeGraphCtrl',
+    controller:'teTemperatureCtrl',
     scope:{}
    }
  });
