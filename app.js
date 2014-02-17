@@ -6,7 +6,7 @@ var app = express();
 var server = http.createServer(app);
 var io = require('socket.io').listen(server);
 
-var ecoBotServer = require('./modules/ecoBot.js');
+var ecoBotServer = require('eco-server');
 var ecoBot = new ecoBotServer(5432);
 
 
@@ -21,31 +21,16 @@ app.use("/services", express.static(__dirname + '/app/services'));
 app.use("/assets", express.static(__dirname + '/app/assets'));
 
 
-
-
 io.sockets.on('connection', function (socket) {
 
   ecoBot.on('sensor', function(data) {
     socket.emit('eco-data', data);
   });
 
-  // setInterval(function(){
-
-  // 	socket.emit('eco-data', {key:'sensor1', value:(Math.floor(Math.random() * 10) + 1)/10});
-  // 	socket.emit('eco-data', {key:'sensor2', value:(Math.floor(Math.random() * 10) + 1)/10});
-  // 	socket.emit('eco-data', {key:'sensor3', value:(Math.floor(Math.random() * 10) + 1)/10});
-  // 	socket.emit('eco-data', {key:'sensor4', value:(Math.floor(Math.random() * 10) + 1)/10});
-  // 	socket.emit('eco-data', {key:'sensor5', value:(Math.floor(Math.random() * 10) + 1)/10});
-  // 	socket.emit('eco-data', {key:'sensor6', value:(Math.floor(Math.random() * 10) + 1)/10});
-  //   socket.emit('eco-data', {key:'sensor7', value:(Math.floor(Math.random() * 10) + 1)/10});
-  //   socket.emit('eco-data', {key:'sensor8', value:(Math.floor(Math.random() * 10) + 1)/10});
-
-  // }, 2000);
-  
 });
 
 app.get('/', function(req, res) {
-    res.sendfile(__dirname + '/app/index.html');
+  res.sendfile(__dirname + '/app/index.html');
 });
 
 server.listen(3000);
