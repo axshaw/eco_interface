@@ -1,64 +1,57 @@
- <div class='chart half col-md-6' id='chart3'>
- 	<svg></svg>
- </div>
-
- <div class='chart half col-md-6' id='chart4'>
- 	<svg></svg>
- </div>
- <script>
- var data = [{
- 	"key": "Long",
- 	"values": getData()
- }];
- var chart;
- var duration= 1500;
- function redraw() {
+<h1 class="col-md-12 clearfix page-header">Historic Charts</h1>
 
 
- 	nv.addGraph(function () {
- 		chart = nv.models.cumulativeLineChart()
- 		.x(function (d) { return d.x })
- 		.y(function (d) { return d.y / 100 })
- 		.color(d3.scale.category10().range());
+<div class="col-md-12 EcoWidget LineGraph">
+	<div class="panel panel-default">
+		<div class="panel-heading">Temperature - This Week</div>
+		<div class="panel-body">
+			<div 
+				eco-line-graph 
+				id="tempThisWeekGraph"
+				class='chart'
+				no-data="Making request to get data..."
+				axis-x-label="Time (H:M:S)"
+				axis-y-label="Temperature"
+				key="Temperature"/>
+		</div>
+	</div>
+</div>
+
+<div class="col-md-12 EcoWidget LineGraph">
+	<div class="panel panel-default">
+		<div class="panel-heading">Light - This Week</div>
+		<div class="panel-body">
+			<div 
+				eco-line-graph 
+				id="lightThisWeekGraph"
+				class='chart'
+				no-data="Making request to get data..."
+				axis-x-label="Time (H:M:S)"
+				axis-y-label="Light"
+				max="15"
+				line-color='#d6dd18'
+				key="Light"/>
+		</div>
+	</div>
+</div>
 
 
- 		chart.xAxis
- 		.tickFormat(function (d) {
- 			return d3.time.format('%x')(new Date(d))
- 		});
+<div class="col-md-12 EcoWidget LineGraph">
+	<div class="panel panel-default">
+		<div class="panel-heading">Carbon - This Week</div>
+		<div class="panel-body">
+			<div 
+				eco-line-graph 
+				id="carbonThisWeekGraph"
+				class='chart'
+				no-data="Making request to get data..."
+				axis-x-label="Time (H:M:S)"
+				axis-y-label="Carbon"
+				max="1000"
+				line-color='#9d7b67'
+				key="Carbon"/>
+		</div>
+	</div>
+</div>
 
- 		chart.yAxis
- 		.tickFormat(d3.format(',.1%'));
 
- 		d3.select('.chart svg')
- 		.datum(data)
- 		.transition().duration(duration)
- 		.call(chart);
-
- 		nv.utils.windowResize(chart.update);
-
- 		return chart;
- 	});        
-
-
- }
-
- function getData() {
- 	var arr = [];
- 	var theDate = new Date(2012, 01, 01, 0, 0, 0, 0);
- 	for (var x = 0; x < 30; x++) {
- 		arr.push({x: new Date(theDate.getTime()), y: Math.random() * 100});
- 		theDate.setDate(theDate.getDate() + 1);
- 	}
- 	return arr;
- }
-
- setInterval(function () {
- 	var long = data[0].values;
- 	var next = new Date(long[long.length - 1].x);
- 	next.setDate(next.getDate() + 1)
- 	long.shift();
- 	long.push({x:next.getTime(), y:Math.random() * 100});
- 	redraw();
- }, duration);
- </script>
