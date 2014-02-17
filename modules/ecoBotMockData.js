@@ -1,43 +1,42 @@
 var ecoBotMockData = function(eventEmitter){
 
-	return {
-		getMockSensorData:function(numberOfHistoricDays, numberOfReadingsPerDay, maxValue){
-			
-			var data = [];
-			var now = new Date();
-			var numberOfReadingsPerDay = numberOfReadingsPerDay || 3;
-			var numberOfHistoricDays = numberOfHistoricDays || 7;
-			var maxValue = maxValue || 100;
-			var lastWeek = now.setDate(now.getDate()-numberOfHistoricDays);
+    return {
+        getMockSensorData:function(numberOfHistoricDays, numberOfReadingsPerDay, maxValue){
 
-			//loop through the number of days between now and the historic startdate (a week)
-			for(var i = 0; i < numberOfHistoricDays; i++ ){
+            var data = [];
+            var now = new Date();
+            var numberOfReadingsPerDay = numberOfReadingsPerDay || 3;
+            var numberOfHistoricDays = numberOfHistoricDays || 7;
+            var maxValue = maxValue || 100;
 
-				var reading = (23 / numberOfReadingsPerDay);
+            //loop through the number of days between now and the historic startdate (a week)
+            for(var i = 0; i < numberOfHistoricDays; i++ ){
 
-				//How many readings a day?
-				for(var x = 0; x < numberOfReadingsPerDay; x++){
+                var reading = (23 / numberOfReadingsPerDay);
 
-					//Create date and random time
-					var date = new Date();
-					date.setDate(date.getDate()-(numberOfHistoricDays - i));
+                //How many readings a day?
+                for(var x = 0; x < numberOfReadingsPerDay; x++){
 
-					date.setHours(Math.floor(reading));
+                    //Create date and random time
+                    var date = new Date();
+                    date.setDate(date.getDate()-(numberOfHistoricDays - i));
 
-					data.push({
-						label:date.getTime(),
-						value: Math.floor(Math.random() * (parseInt(maxValue) + 1))
-					});
+                    date.setHours(Math.floor(reading));
 
-					reading = reading + (23 / numberOfReadingsPerDay);
+                    data.push({
+                        label:date.getTime(),
+                        value: Math.floor(Math.random() * (parseInt(maxValue) + 1))
+                    });
 
-				}
-			}
+                    reading = reading + (23 / numberOfReadingsPerDay);
 
-			return data;
+                }
+            }
 
-		}
-	}
+            return data;
+
+        }
+    }
 }
 
 

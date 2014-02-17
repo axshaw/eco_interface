@@ -5,11 +5,7 @@ ecoApp.directive('ecoLineGraph', function($http, DateTimeService) {
 		template: '<div class="graph"><svg></svg></div>',
 		link: function(scope, element, attrs) {
 
-			console.log(attrs);
-
 			attrs.max = attrs.max || 30;
-
-			//TODO: make request to get data somehow?
 
 			var defaults = {
 				axisLabel: '',
@@ -37,8 +33,6 @@ ecoApp.directive('ecoLineGraph', function($http, DateTimeService) {
 			}).
 			success(function(_data, status, headers, config) {
 				data[0].values = _data;
-				console.log(data[0].values);
-				console.log(data[0].values.length);
 				redraw();
 			}).
 			error(function(data, status, headers, config) {
