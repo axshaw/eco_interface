@@ -13,5 +13,4 @@ ecoApp.controller('ecEcoRobotCtrl', function ($scope, EcoWebSocketService)  {
 
 	EcoWebSocketService.RegisterListener($scope, 'compass',  'compass');
 
-
 });

@@ -27,6 +27,11 @@ ecoApp.directive('ecoLineGraph', function($http, DateTimeService) {
 				values: []
 			}];
 
+
+            //TODO: move this to service? SensorService.GetSensorData()
+            //Maybe use promises to return the data?
+            //Need to return promise, and set function on resolve and (error)
+
 			$http({
 				method: 'GET',
 				url: '/getSensorData?max=' + attrs.max
