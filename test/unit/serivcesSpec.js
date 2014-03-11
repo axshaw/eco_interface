@@ -78,7 +78,20 @@ describe('EcoWebSocketService', function(){
 
     });
 
-    it('Should not broadcast event on the rootscope when non eco event is pushed', function(){
+    it('Should not set object onto scope when event sent from root scope', function(){
+
+        var randomEmitKey = 'sensor';
+        var otherSocketValue = 'test';
+        var sensorValue = 1;
+
+        //register listener onto service and pass the scope to map back too.
+        ecoWebSocketService.RegisterListener(scope, randomEmitKey);
+
+        //Simulate the broadcast that gets called from EcoService
+        rootScope.$broadcast(otherSocketValue, {value:sensorValue});
+
+        expect(scope.sensor).toBe(undefined);
+
     });
 
 });

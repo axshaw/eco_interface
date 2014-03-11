@@ -10,6 +10,6 @@ ecoApp.controller('conConnectivityCtrl', function ($scope, EcoWebSocketService) 
 		}
 	});
 
-	EcoWebSocketService.RegisterListener($scope, 'connectivity');
+        EcoWebSocketService.RegisterListener($scope, 'connectivity');
 
 });

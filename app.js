@@ -29,7 +29,7 @@ io.sockets.on('connection', function (socket) {
     socket.emit('eco-data', data);
   });
 
-});
+});	
 
 app.get('/', function(req, res) {
   res.sendfile(__dirname + '/app/index.html');
