@@ -6,10 +6,10 @@
   "dependencies": {
     "socket.io": "~0.9.16",
     "express": "~3.4.8",
-    "eco-server": "~0.1.2"
+    "eco-server": "~1.0.0"
   },
   "devDependencies": {
-    "eco-server": "~0.1.2"
+    "eco-server": "~1.0.0"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
