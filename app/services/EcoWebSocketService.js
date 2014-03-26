@@ -1,7 +1,7 @@
  ecoApp.service('EcoWebSocketService', function($rootScope) {
 
  	//Make connection to websocket
- 	var socket = io.connect('http://localhost'),
+ 	var socket = io.connect('/'),
         self = this;
 
  	//listen for any data being pushed
